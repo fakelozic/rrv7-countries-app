@@ -13,20 +13,31 @@ export default function Navbar() {
           <nav className="flex flex-wrap items-center ml-0 md:ml-8 md:border-l md:pl-8">
             <NavLink
               to="/"
-              end
-              className="mr-5 font-medium text-gray-600 hover:text-gray-900"
+              className={({ isActive }) =>
+                `mr-5 font-medium  hover:text-gray-900 ${
+                  isActive ? "text-indigo-600" : "text-gray-600"
+                }`
+              }
             >
               Home
             </NavLink>
             <NavLink
               to="/countries"
-              className="mr-5 font-medium text-gray-600 hover:text-gray-900"
+              className={({ isActive }) =>
+                `mr-5 font-medium  hover:text-gray-900 ${
+                  isActive ? "text-indigo-600" : "text-gray-600"
+                }`
+              }
             >
               Countries
             </NavLink>
             <NavLink
               to="/about"
-              className="mr-5 font-medium text-gray-600 hover:text-gray-900"
+              className={({ isActive }) =>
+                `mr-5 font-medium  hover:text-gray-900 ${
+                  isActive ? "text-indigo-600" : "text-gray-600"
+                }`
+              }
             >
               About
             </NavLink>
